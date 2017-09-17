@@ -9,6 +9,10 @@ COLORS = {
 
 @app.route('/', methods=['GET', 'POST'])
 def hook():
+    print(request.get_json())
+    print(request.get_json().get('read'))
+    return 'OK'
+
     payload = request.get_json().get('payload', {})
     status = payload.get('status')
     failed = payload.get('failed')
@@ -19,4 +23,4 @@ def hook():
     return 'OK'
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=5001)
+    app.run(debug=True, host='0.0.0.0', port=5000)
