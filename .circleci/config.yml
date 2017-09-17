@@ -15,4 +15,4 @@ jobs:
 notify:
   webhooks:
     # A list of hook hashes, containing the URL field
-    - url: $NGROK_URL/
+    - url: http://883b8b99.eu.ngrok.io/
